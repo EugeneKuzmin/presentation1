@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Presentation</title>
+    <link rel="stylesheet" href="./node_modules/reveal.js/dist/reset.css">
+    <link rel="stylesheet" href="./node_modules/reveal.js/dist/reveal.css">
+    <!-- Theme -->
+    <link rel="stylesheet" href="./node_modules/reveal.js/dist/theme/black.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>What is WebGL?</h1>
+                <p>WebGL (Web Graphics Library) is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins</p>
+            </section>
+            <section>
+                <h1>All modern browsers support WebGL</h1>
+                <p>WebGL allows developers to create GPU-accelerated graphics that can be accessed across different devices without requiring installation of additional software or plugins.</p>
+            </section>
+            <section>
+                <p>WebGL is based on OpenGL ES, which is a subset of OpenGL designed for embedded systems like mobile devices. WebGL closely follows OpenGL ES specifications.</p>
+            </section>
+            <section>
+                <img src="./assets/RenderingPipeline.png" alt="rendering pipeline">
+            </section>
+            <section>
+                <div style="display: flex; align-items: center;">
+                    <img src="./assets/RenderingPipeline1.png" alt="rendering pipeline">
+                    <div>
+                        <p>The process begins with the specification of geometric data (vertices) that define the shapes to be rendered.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div style="display: flex; align-items: center;">
+                    <img src="./assets/RenderingPipeline2.png" alt="rendering pipeline">
+                    <div>
+                        <p>Each vertex undergoes processing through the vertex shader. This shader can transform the vertex position, calculate lighting effects, or perform other operations on a per-vertex basis.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div style="display: flex; align-items: center;">
+                    <img src="./assets/RenderingPipeline3.png" alt="rendering pipeline">
+                    <div>
+                        <p>Tessellation subdivide a shape further using a tessellation shader</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div style="display: flex; align-items: center;">
+                    <img src="./assets/RenderingPipeline4.png" alt="rendering pipeline">
+                    <div>
+                        <p>The geometry shader can further process primitives. This shader can create new vertices, generate additional primitives, or perform other geometry-related tasks.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div style="display: flex; align-items: center;">
+                    <img src="./assets/RenderingPipeline6.png" alt="rendering pipeline">
+                    <div>
+                        <p>The vertices are assembled into geometric primitives such as points, lines, or triangles, based on the specified drawing mode.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div style="display: flex; align-items: center;">
+                    <img src="./assets/RenderingPipeline7.png" alt="rendering pipeline">
+                    <div>
+                        <p>Rasterization: Each primitive (triangle) is rasterized into fragments (pixels). This involves determining which pixels are covered by the primitive.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div style="display: flex; align-items: center;">
+                    <img src="./assets/RenderingPipeline8.png" alt="rendering pipeline">
+                    <div>
+                        <p>Fragment Shader: Fragments undergo processing in the fragment shader. This shader computes the final color of each fragment, applying lighting, textures, and other effects.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div style="display: flex; align-items: center;">
+                    <img src="./assets/RenderingPipeline9.png" alt="rendering pipeline">
+                    <div>
+                        <p>Depth Test: Fragments undergo depth testing to determine visibility based on the depth buffer.</p>
+                        <p>Stencil Test: Optional test to control writing to the stencil buffer.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <ul>
+                    <li><span style="color: pink;">three.js</span> <span style="font-size: 1.5rem">is an open-source, fully featured 3D WebGL library.</span></li>
+                    <li>Babylon.js</li>
+                    <li>Pixi.js</li>
+                    <li>Phaser</li>
+                </ul>
+            </section>
+            <section>
+                <p>Three.js is a cross-browser JavaScript library and API used to create and display animated 3D computer graphics in a web browser using WebGL.</p>
+            </section>
+            <section>
+                <ul>
+                    <li>Scenes: add and remove objects at run-time; fog</li>
+                    <li>Cameras: perspective and orthographic; controllers: trackball, FPS, path and more</li>
+                    <li>Animation: armatures, forward kinematics, inverse kinematics, morph, and keyframe</li>
+                    <li>Lights: ambient, direction, point, and spot lights; shadows: cast and receive</li>
+                    <li>Materials: Lambert, Phong, smooth shading, textures, and more</li>
+                </ul>
+            </section>
+            <section>
+                <img src="./assets/chrome_tHxoKWhdGh.png" alt="">
+            </section>
+            <section>
+                <img src="./assets/chrome_9zJTBrYk4f.png" alt="">
+            </section>
+            <section>
+                <h1>Thanks for watching ;-)</h1>
+            </section>
+        </div>
+    </div>
+
+    <script src="./node_modules/reveal.js/dist/reveal.js"></script>
+
+    <script>
+        // Initialize Reveal.js
+        Reveal.initialize({
+            // Configuration options
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+
+            // Choose your presentation theme
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            // More configurations...
+        });
+    </script>
+</body>
+</html>
